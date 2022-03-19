@@ -41,7 +41,7 @@ export default function CharactersScreen({navigation}){
         <SafeAreaView style={styles.container}>
             {loading ?
                 <SafeAreaView style={[styles.container__indicator, styles.horizontal]}> 
-                    <ActivityIndicator size={"large"} color={"#54DB33"}/>
+                    <ActivityIndicator size={"large"} color={"#"}/>
                 </SafeAreaView>
                 :
                 <SafeAreaView>
@@ -68,6 +68,6 @@ const styles = StyleSheet.create({
     container: {
         height: "100%",
         paddingBottom: 15,
-        backgroundColor: "#24282f",
+        backgroundColor: "#001a66",
     },
 });

@@ -2,7 +2,7 @@ const URL = "https://rickandmortyapi.com/api/character/"
 
 export async function getCharactersApi(){
     try {
-        const request = await fetch(`${URL}?page=20`);
+        const request = await fetch(`${URL}?page=15`);
         const response = await request.json();
         return response.results;
     } catch (err) {

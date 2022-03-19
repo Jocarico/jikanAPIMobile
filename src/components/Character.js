@@ -8,7 +8,7 @@ import {
 import React, { useState, useEffect } from "react";
 import { getEpisodeName } from '../api/characters';
 
-export default function Character({ character }) {
+export default function Character({ character, navigation }) {
     const [episode, setEpisode] = useState();
 
     const fetchEpisodeData = async () =>{
@@ -23,7 +23,7 @@ export default function Character({ character }) {
     return (
         <TouchableWithoutFeedback 
             onPress={()=>{
-                console.log(character.name);
+                navigation.navigate("CharacterDetails", {character})
             }}
         >
             <View style = {styles.character}>
@@ -93,8 +93,7 @@ const styles = StyleSheet.create({
         justifyContent:"center",
         alignContent: "flex-start",
         paddingLeft: 10,
-        height: "100%",
-        backgroundColor: "#3c3e44",
+        backgroundColor: "#3d5c5c",
         borderTopRightRadius: 10,
         borderBottomRightRadius: 10,
     },
@@ -102,7 +101,7 @@ const styles = StyleSheet.create({
         height: 50,
         borderBottomLeftRadius: 5,
         borderBottomRightRadius: 5,
-        color: '#fefefe',
+        color: '#ff1a1a',
         fontSize: 18,
         fontWeight: "bold",
         textAlignVertical: "center",
@@ -142,7 +141,7 @@ const styles = StyleSheet.create({
         fontSize: 13,
     },
     Data__location: {
-        color: "#fff",
+        color: "#00AB09",
         fontSize: 14,
     },
 });

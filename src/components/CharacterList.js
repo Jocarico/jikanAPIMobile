@@ -2,7 +2,7 @@ import { FlatList, StyleSheet,} from "react-native";
 import React from 'react'
 import Character from "./Character"
 
-export default function CharacterList({ characters }) {
+export default function CharacterList({ characters, navigation }) {
     return(
         <FlatList
             data = {characters}
@@ -10,7 +10,7 @@ export default function CharacterList({ characters }) {
             showsVerticalScrollIndicator = {false}
             contentContainerStyle={styles.flatListContentContainer}
             keyExtractor={(character)=>String(character.id)}
-            renderItem={({item}) => <Character character = {item} />}
+            renderItem={({item}) => <Character character = {item} navigation={navigation}/>}
         />
     )
 }
@@ -18,6 +18,6 @@ export default function CharacterList({ characters }) {
 const styles = StyleSheet.create({
     flatListContentContainer:{
         paddingHorizontal: 5,
-        backgroundColor:"#24282f"
+        backgroundColor:"#001a66"
     }
 })
