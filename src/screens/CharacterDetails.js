@@ -12,28 +12,12 @@ export default function CharacterDetails(props){
                     <Text style={styles.property_value}>{character.name}</Text>
                 </View>
                 <View style={styles.property}>
-                    <Text style={styles.property_name}>Status: </Text>
-                    <Text style={styles.property_value}>{character.status}</Text>
+                    <Text style={styles.property_name}>Name in kanji: </Text>
+                    <Text style={styles.property_value}>{character.name_kanji}</Text>
                 </View>
                 <View style={styles.property}>
-                    <Text style={styles.property_name}>Species: </Text>
-                    <Text style={styles.property_value}>{character.species}</Text>
-                </View>
-                <View style={styles.property}>
-                    <Text style={styles.property_name}>Type: </Text>
-                    <Text style={styles.property_value}>{character.type || "NA"}</Text>
-                </View>
-                <View style={styles.property}>
-                    <Text style={styles.property_name}>Gender: </Text>
-                    <Text style={styles.property_value}>{character.gender}</Text>
-                </View>
-                <View style={styles.property}>
-                    <Text style={styles.property_name}>Origin: </Text>
-                    <Text style={styles.property_value}>{character.origin.name}</Text>
-                </View>
-                <View style={styles.property}>
-                    <Text style={styles.property_name}>Location: </Text>
-                    <Text style={styles.property_value}>{character.location.name}</Text>
+                    <Text style={styles.property_name}>About: </Text>
+                    <Text style={styles.property_value}>{character.about}</Text>
                 </View>
             </View>
         </View>

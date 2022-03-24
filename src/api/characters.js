@@ -1,8 +1,8 @@
-const URL = "https://rickandmortyapi.com/api/character/"
+const URL = "https://api.jikan.moe/v4/anime/34572/characters"
 
 export async function getCharactersApi(){
     try {
-        const request = await fetch(`${URL}?page=15`);
+        const request = await fetch(`${URL}`);
         const response = await request.json();
         return response.results;
     } catch (err) {
@@ -19,13 +19,14 @@ export async function getCharacterByIdApi(id){
         throw Error(err);
     }
 }
-
-export async function getEpisodeName(url){
+/*
+export async function getAnimePicture(){
     try{
-        const request = await fetch(url);
+        const request = await fetch(`${URL}${id}/pictures`);
         const response = await request.json();
         return response.name;
     }catch (err){
         throw Error(err);
     }
 }
+*/

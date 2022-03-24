@@ -6,18 +6,18 @@ import {
     TouchableWithoutFeedback,
 } from 'react-native';
 import React, { useState, useEffect } from "react";
-import { getEpisodeName } from '../api/characters';
+import { getAnimePicture } from '../api/characters';
 
 export default function Character({ character, navigation }) {
-    const [episode, setEpisode] = useState();
+    const [episode, setPicture] = useState();
 
-    const fetchEpisodeData = async () =>{
-        const request = await getEpisodeName(character.episode[0]);
-        setEpisode(request);
+    const fetchPictureData = async () =>{
+        const request = await getAnimePicture(character.episode[0]);
+        setPicture(request);
     };
 
     useEffect(() => {
-        fetchEpisodeData();
+        fetchPictureData();
     });
 
     return (
@@ -30,34 +30,18 @@ export default function Character({ character, navigation }) {
                 <View style = {styles.spacing}>
                     <Image source = {{ uri: character.image}} style={styles.image}/>
                     <View style = {styles.character__info}>
-                        <Text style={styles.character__name}> {character.name} </Text>
+                        <Text style={styles.character__name}> {character.mal_id} </Text>
                         <View style= {styles.character__status}>
-                            <View style={styles.status_indicator__container}>
-                                <View 
-                                    style={[
-                                        styles.character__status_indicator, 
-                                        character.status === "Alive"
-                                            ? styles.character__alive
-                                            : styles.character__dead
-                                    ]}
-                                />
-                            </View>
                             <Text 
                                 style={styles.character__status_text}
-                            >{`${character.status} - ${character.species}`}</Text>
+                            >{`${character.name}`}</Text>
                         </View>
                         <View style={styles.character__data}>
                             <Text style = {styles.Data__title}>
-                                Last Known Location:
+                                Character role:
                             </Text>
                             <Text style = {styles.Data__location}>
-                                {character.location.name}
-                            </Text>
-                            <Text style = {styles.Data__title}>
-                                First seen in:
-                            </Text>
-                            <Text style = {styles.Data__location}>
-                                {episode}
+                                {character.role}
                             </Text>
                         </View>                            
                     </View>

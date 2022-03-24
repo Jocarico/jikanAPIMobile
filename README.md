@@ -1,9 +1,9 @@
 
-# mobileApiRick-Morty
+# mobileApiJikan
 
 
 First React Native project, in this project it was
-implemented a public API by using async functions along with request from the API. In this example https://rickandmortyapi.com/ API. 
+implemented a public API by using async functions along with request from the API. In this example https://api.jikan.moe/ API. 
 
 This project was made using the MVC pattern
 
