@@ -18,7 +18,7 @@ Once the application opens it has the feature of popping at the screen for a cou
 an image on the entire screen.
 
 
-<img src="https://user-images.githubusercontent.com/69483854/159099395-7b78a5dc-cc06-478b-84c3-1a8c7568b2fe.png" width="250" alt="splash screen">
+<img src="https://www.idlewp.com/wp-content/uploads/2022/01/black-clover-wallpaper-idlewp.png" width="250" alt="splash screen">
 
 
 
