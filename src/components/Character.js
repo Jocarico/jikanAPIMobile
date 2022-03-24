@@ -1,4 +1,4 @@
-import { 
+ import { 
     View, 
     Text, 
     StyleSheet, 
@@ -6,20 +6,20 @@ import {
     TouchableWithoutFeedback,
 } from 'react-native';
 import React, { useState, useEffect } from "react";
-import { getAnimePicture } from '../api/characters';
+import { getCharactersApi } from '../api/characters';
 
 export default function Character({ character, navigation }) {
-    const [episode, setPicture] = useState();
+    const [name, setName] = useState();
 
-    const fetchPictureData = async () =>{
-        const request = await getAnimePicture(character.episode[0]);
-        setPicture(request);
+    const fetchCharactersData = async () =>{
+        const request = await getCharactersApi(character);
+        setName(request);
     };
 
     useEffect(() => {
-        fetchPictureData();
+        fetchCharactersData();
     });
-
+ 
     return (
         <TouchableWithoutFeedback 
             onPress={()=>{
