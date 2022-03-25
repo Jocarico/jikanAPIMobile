@@ -1,15 +1,15 @@
-const URL = "https://api.jikan.moe/v4/"
+const URL = "https://api.jikan.moe/v4/anime/34572/characters"
 //function that obtain all the characters from the anime Black Clover
 export async function getCharactersApi(){
     try {
-        const request = await fetch(`${URL}anime/34572/characters`);
+        const request = await fetch(`${URL}`);
         const response = await request.json();
         return response.results;
     } catch (err) {
         throw Error(err);
     }
 }
-
+/*
 //Function that obtains a characters info with his id
 export async function getCharacterByIdApi(id){
     try {
@@ -20,6 +20,7 @@ export async function getCharacterByIdApi(id){
         throw Error(err);
     }
 }
+
 export async function getAboutInfo(url){
     try{
         const request = await fetch(url);
@@ -29,3 +30,4 @@ export async function getAboutInfo(url){
         throw Error(err);
     }
 }
+*/
