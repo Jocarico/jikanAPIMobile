@@ -19,6 +19,7 @@ export default function Character({ character, navigation }) {
     useEffect(() => {
         fetchCharactersData();
     });
+    //<Image source = {{ uri: character.images.webp.image_url}} style={styles.image}/>
  
     return (
         <TouchableWithoutFeedback 
@@ -28,22 +29,13 @@ export default function Character({ character, navigation }) {
         >
             <View style = {styles.character}>
                 <View style = {styles.spacing}>
-                    <Image source = {{ uri: character.images.webp.image_url}} style={styles.image}/>
                     <View style = {styles.character__info}>
-                        <Text style={styles.character__name}> {character.mal_id} </Text>
+                        <Text style={styles.character__name}> {character.name} </Text>
                         <View style= {styles.character__status}>
                             <Text 
                                 style={styles.character__status_text}
-                            >{`${character.name}`}</Text>
-                        </View>
-                        <View style={styles.character__data}>
-                            <Text style = {styles.Data__title}>
-                                Character role:
-                            </Text>
-                            <Text style = {styles.Data__location}>
-                                {role}
-                            </Text>
-                        </View>                            
+                            >{`${character.url}`}</Text>
+                        </View>                         
                     </View>
                 </View>
             </View>

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { StyleSheet, Image, SafeAreaView } from "react-native";
 
 const image_url =
-"https://www.idlewp.com/wp-content/uploads/2022/01/black-clover-wallpaper-idlewp.png"
+"https://i.pinimg.com/originals/3c/a9/9a/3ca99aa52168e8680908bb4da67fcd11.jpg"
 
 export default function SplashScreen({ navigation }){
     useEffect(() => {

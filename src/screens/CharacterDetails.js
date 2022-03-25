@@ -12,12 +12,8 @@ export default function CharacterDetails(props){
                     <Text style={styles.property_value}>{character.name}</Text>
                 </View>
                 <View style={styles.property}>
-                    <Text style={styles.property_name}>Name in kanji: </Text>
-                    <Text style={styles.property_value}>{character.name_kanji}</Text>
-                </View>
-                <View style={styles.property}>
-                    <Text style={styles.property_name}>About: </Text>
-                    <Text style={styles.property_value}>{character.about}</Text>
+                    <Text style={styles.property_name}>Url for more: </Text>
+                    <Text style={styles.property_value}>{character.url}</Text>
                 </View>
             </View>
         </View>

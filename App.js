@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { StyleSheet } from 'react-native'
 //Text, View, SafeAreaView, ActivityIndicator, FlatList
-  import "react-native-gesture-handler";
-  import {NavigationContainer} from '@react-navigation/native';
-  import NavigationStack from "./src/navigation/NavigationStack";
-  //import NavigationTab from "./src/navigation/NavigationTab";
-  //import NavigationDrawer from "./src/navigation/NavigationDrawer";
-  
+import "react-native-gesture-handler";
+import {NavigationContainer} from '@react-navigation/native';
+import NavigationStack from "./src/navigation/NavigationStack";
+
   export default function App() {
     return (
       <NavigationContainer>

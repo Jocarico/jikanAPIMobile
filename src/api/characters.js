@@ -1,14 +1,15 @@
-const URL = "https://api.jikan.moe/v4/anime/34572/characters"
+const URL = "https://pokeapi.co/api/v2/pokemon"
 //function that obtain all the characters from the anime Black Clover
 export async function getCharactersApi(){
     try {
         const request = await fetch(`${URL}`);
         const response = await request.json();
-        return response.data;
+        return response.results;
     } catch (err) {
         throw Error(err);
-    }
+    }    
 }
+
 /*
 //Function that obtains a characters info with his id
 export async function getCharacterByIdApi(id){
