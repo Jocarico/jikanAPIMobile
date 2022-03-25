@@ -4,7 +4,7 @@ export async function getCharactersApi(){
     try {
         const request = await fetch(`${URL}`);
         const response = await request.json();
-        return response.results;
+        return response.data;
     } catch (err) {
         throw Error(err);
     }

@@ -28,7 +28,7 @@ export default function Character({ character, navigation }) {
         >
             <View style = {styles.character}>
                 <View style = {styles.spacing}>
-                    <Image source = {{ uri: character.image}} style={styles.image}/>
+                    <Image source = {{ uri: character.images.webp.image_url}} style={styles.image}/>
                     <View style = {styles.character__info}>
                         <Text style={styles.character__name}> {character.mal_id} </Text>
                         <View style= {styles.character__status}>
@@ -41,7 +41,7 @@ export default function Character({ character, navigation }) {
                                 Character role:
                             </Text>
                             <Text style = {styles.Data__location}>
-                                {character.role}
+                                {role}
                             </Text>
                         </View>                            
                     </View>
