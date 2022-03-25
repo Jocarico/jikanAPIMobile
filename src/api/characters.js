@@ -9,8 +9,8 @@ export async function getCharactersApi(){
         throw Error(err);
     }
 }
-/*
-Function that obtains a characters info with his id
+
+//Function that obtains a characters info with his id
 export async function getCharacterByIdApi(id){
     try {
         const request = await fetch(`${URL}characters/${id}`);
@@ -29,4 +29,3 @@ export async function getAboutInfo(url){
         throw Error(err);
     }
 }
-*/

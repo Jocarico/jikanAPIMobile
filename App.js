@@ -1,19 +1,36 @@
 import React, { useState, useEffect } from "react";
-import { StyleSheet,
-  Text,
-  View,
-  SafeAreaView,
-  ActivityIndicator,
-  FlatList, } from 'react-native'
-import "react-native-gesture-handler";
-import {NavigationContainer} from '@react-navigation/native';
-import NavigationStack from "./src/navigation/NavigationStack";
-import NavigationTab from "./src/navigation/NavigationTab";
-import NavigationDrawer from "./src/navigation/NavigationDrawer";
-
-const movieURL = "https://reactnative.dev/movies.json";
-
-const App = () => {
+import { StyleSheet } from 'react-native'
+//Text, View, SafeAreaView, ActivityIndicator, FlatList
+  import "react-native-gesture-handler";
+  import {NavigationContainer} from '@react-navigation/native';
+  import NavigationStack from "./src/navigation/NavigationStack";
+  //import NavigationTab from "./src/navigation/NavigationTab";
+  //import NavigationDrawer from "./src/navigation/NavigationDrawer";
+  
+  export default function App() {
+    return (
+      <NavigationContainer>
+        <NavigationStack/>      
+      </NavigationContainer>
+    );
+  };
+  
+  const style = StyleSheet.create({
+    container:{
+      flex:1,
+      justifyContent: "center",
+    },
+    horizontal:{
+      flexDirection: "row",
+      justifyContent: "space-around",
+      padding: 0,
+    }
+  })
+  
+  /*
+  const movieURL = "https://reactnative.dev/movies.json";
+  
+  const App = () => {
   // managing state with 'useState'
   const [isLoading, setLoading] = useState(true);
   const [data, setData] = useState([]);
@@ -49,14 +66,20 @@ const App = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      {/* While fetching show the indicator, else show response*/}
+      {/* While fetching show the indicator, else show response*/
+      //}
+      /*
       {isLoading ? (
         <ActivityIndicator />
       ) : (
         <View>
-          {/* Title from URL */}
+          {
+            //Title from URL
+        }
           <Text style={styles.title}>{title}</Text>
-          {/* Display each movie */}
+          {
+          // Display each movie 
+          }
           <View style={{ borderBottomWidth: 1, marginBottom: 12 }}></View>
           <FlatList
             data={data}
@@ -69,7 +92,9 @@ const App = () => {
               </View>
             )}
           />
-          {/* Show the description */}
+          {
+            // Show the description 
+        }
           <Text style={styles.description}>{description}</Text>
         </View>
       )}
@@ -100,25 +125,4 @@ const styles = StyleSheet.create({
 });
 
 export default App;
-
-/*
-export default function App() {
-  return (
-    <NavigationContainer>
-      <NavigationStack/>      
-    </NavigationContainer>
-  );
-};
-
-const style = StyleSheet.create({
-  container:{
-    flex:1,
-    justifyContent: "center",
-  },
-  horizontal:{
-    flexDirection: "row",
-    justifyContent: "space-around",
-    padding: 0,
-  }
-})
 */
